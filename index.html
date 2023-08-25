@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual slider javascript</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'
-        integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=='
-        crossorigin='anonymous' referrerpolicy='no-referrer' />
-    <link rel="stylesheet" href="css/main.css">
-</head>
-
+<html>
+<title>Trial task 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/main.css">
 <body>
 
-    <div class="container">
-       <section class="slider">
-         <div class="slide active"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <button id="left" class="arrow left-arrow">
-            <i class="fas fa-arrow-left"></i>
-        </button>
-        <button id="right" class="arrow right-arrow">
-            <i class="fas fa-arrow-right"></i>
-        </button>
-       </section>
+
+<div class="container">
+<div class="slider">
+    <h2 class="text-center">Slider</h2>
+  <img class="mySlides" src="img/1.jpg">
+  <img class="mySlides" src="img/2.jpg">
+  <img class="mySlides" src="img/3.jpg">
+  <img class="mySlides" src="img/4.jpg">
+  <div class="buttons">
+    <button class="btn btn-dark" onclick="plusDivs(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+     <button class="btn btn-dark" onclick="plusDivs(1)"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+</div>
+<!-- 3D transform rotate -->
+<div class="transform">
+    <h1 class="text-center">3D transforms</h1>
+    <div class="scene">
+    <div class="square x-axis">X</div>
+  </div>
+
+  <div class="scene">
+    <div class="square y-axis">Y</div>
+  </div>
+
+  <div class="scene">
+    <div class="square z-axis">Z</div>
+  </div>
+</div>
+<!-- end of 3D transform rotate -->
+
+<!-- Pseudo elements -->
+    <div class="info mt-5">
+        <h3 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ullam!</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <u>Praesentium incidunt id voluptatibus repudiandae aspernatur ut doloribus veniam iure commodi</u> vero quibusdam, in molestiae culpa dolorem illum pariatur atque <del>quo perspiciatis magni nemo officiis voluptas. Repellendus quidem, tenetur doloribus</del> ducimus <mark>voluptas facilis ipsam voluptatibus numquam aliquam ipsum?</mark> Soluta, facilis. Molestiae, asperiores.</p>
     </div>
+<!-- end of Pseudo elements -->
 
-    <script src="js/main.js"></script>
+<!-- Animate button -->
+<div class="animation-button">
+    <h2>Animated Button</h2>
+<button class="animation-btn"><span>Submit </span></button>
+</div>
+<!-- end of Animate button -->
+
+<script src="js/main.js"></script>
+
 </body>
-
 </html>

@@ -1,37 +1,17 @@
-const body     = document.querySelector("body");
-const slides   = document.querySelectorAll(".slide");
-const leftBtn  = document.querySelector("#left");
+var slideIndex = 1;
+showDivs(slideIndex);
 
-const rightBtn = document.querySelector("#right");
-let activeSlide = 0;
-
-function bodyBg() {
-    body.style.backgroundImage = slides[activeSlide].style.backgroundImage;
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 
-bodyBg();
-
-function currentSlide() {
-    slides.forEach(slide => {
-        slide.classList.remove("active");
-    });
-    slides[activeSlide].classList.add("active");
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
 }
-
-leftBtn.addEventListener("click", () => {
-    activeSlide--;
-    if(activeSlide < 0) {
-        activeSlide = slides.length - 1;
-    }
-    bodyBg();
-    currentSlide();
-});
-
-rightBtn.addEventListener("click", () => {
-    activeSlide++;
-    if(activeSlide > slides.length -1) {
-        activeSlide = 0;
-    }
-    bodyBg();
-    currentSlide();
-});
